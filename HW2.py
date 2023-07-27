@@ -44,6 +44,7 @@ search = driver.find_element(By.XPATH, "//*[text()='& Orders']").click()
 # wait for 4 sec
 sleep(4)
 
+
 # verify  results
 expected_result = 'New to Amazon?'
 actual_result = driver.find_element(By.XPATH, "//*[@class='a-divider a-divider-break']").text
