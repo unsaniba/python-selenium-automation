@@ -37,12 +37,12 @@ def open_amazon(context):
 
 
 @when('click on "Orders')
-def search_on_amazon(context):
+def click_on_order(context):
     context.driver.find_element(By.XPATH, "//*[text()='& Orders']").click()
 
 
 @then('the "Sign In" header is visible')
-def verify_search_result(context):
+def verify_signin(context):
     expected_result = 'Sign in'
     actual_result = context.driver.find_element(By.CSS_SELECTOR, '.a-spacing-small').text
     assert expected_result == actual_result, f'Error, expected {expected_result} did not match actual {actual_result}'
@@ -71,12 +71,12 @@ def open_amazon(context):
 
 
 @when('click on "Cart"')
-def search_on_amazon(context):
+def click_on_cart(context):
     context.driver.find_element(By.ID, "nav-cart-count").click()
 
 
 @then('the "Your Amazon Cart is empty" header is visible')
-def verify_search_result(context):
+def verify_cart(context):
     expected_result = 'Your Amazon Cart is empty'
     actual_result = context.driver.find_element(By.CSS_SELECTOR, '.a-row.sc-your-amazon-cart-is-empty').text
     assert expected_result == actual_result, f'Error, expected {expected_result} did not match actual {actual_result}'
