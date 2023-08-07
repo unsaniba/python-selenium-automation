@@ -59,7 +59,7 @@ Feature: Test for Amazon clicks on the cart icon and verifies that Your Amazon C
     Then the "Your Amazon Cart is empty" header is visible
 
 #***********************************************************************************
-# Test for BDD Amazon Verify Sign  *********************************************************
+# Test for BDD Amazon Cart is empty   *********************************************************
 from behave import given, when, then
 from selenium.webdriver.common.by import By
 
