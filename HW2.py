@@ -1,5 +1,5 @@
 # """"""""""""""""""""""""""""""""""""""""""""""""""""""""
-
+#
 # Amazon logo => driver.find_element(By.XPATH, "//i[@class='a-icon a-icon-logo' and @aria-label='Amazon']")
 #
 # Email field => driver.find_element(By.ID, 'ap_email')
