@@ -10,5 +10,3 @@ class Header(Page):
         self.input_text(product, *self.SEARCH_FIELD)
         self.click(*self.SEARCH_BUTTON)
 
-class Signing(Page)
-
