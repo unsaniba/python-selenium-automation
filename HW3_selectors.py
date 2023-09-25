@@ -16,12 +16,12 @@
 
 # Behave (BDD) Test Verify Sign ************************************************************
 
-Feature: Test for Amazon Verify Sign In Page on Amazon
-
-  Scenario: Open Amazon and Click Orders, then Verify Sign In Page
-    Given Open Amazon page
-    When click on "Orders"
-    Then the "Sign In" header is visible
+# Feature: Test for Amazon Verify Sign In Page on Amazon
+#
+#   Scenario: Open Amazon and Click Orders, then Verify Sign In Page
+#     Given Open Amazon page
+#     When click on "Orders"
+#     Then the "Sign In" header is visible
 
 #***********************************************************************************
 
@@ -51,12 +51,12 @@ def verify_signin(context):
 
 # Behave (BDD) Test Amazon Cart is empty ************************************************************
 
-Feature: Test for Amazon clicks on the cart icon and verifies that Your Amazon Cart is empty.
-
-  Scenario: Open Amazon and Click Cart, then Verify the Cart is empty.
-    Given Open Amazon page
-    When click on "Cart"
-    Then the "Your Amazon Cart is empty" header is visible
+# Feature: Test for Amazon clicks on the cart icon and verifies that Your Amazon Cart is empty.
+#
+#   Scenario: Open Amazon and Click Cart, then Verify the Cart is empty.
+#     Given Open Amazon page
+#     When click on "Cart"
+#     Then the "Your Amazon Cart is empty" header is visible
 
 #***********************************************************************************
 # Test for BDD Amazon Cart is empty   *********************************************************

@@ -11,8 +11,8 @@ def browser_init(context, scenario_name):  # add scenario_name if you want to us
     """
     :param context: Behave context
     """
-    # service = Service(executable_path='/Users/uns/QA/python-selenium-automation/chromedriver')
-    # context.driver = webdriver.Chrome(service=service)
+    service = Service(executable_path='/Users/uns/QA/python-selenium-automation/chromedriver')
+    context.driver = webdriver.Chrome(service=service)
 
     ### OTHER BROWSERS ###
     # service = Service(executable_path='/Users/uns/QA/python-selenium-automation/geckodriver')
@@ -30,25 +30,25 @@ def browser_init(context, scenario_name):  # add scenario_name if you want to us
 
     ### BROWSERSTACK ###
     # Register for BrowserStack, then grab it from https://www.browserstack.com/accounts/settings
-    bs_user = 'younessaniba_I0SxBY'
-    bs_key = 'QWq5RKYUyTBQJqEakqRH'
-    url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
-
-    options = Options()
-    bstack_options = {
-        'os': 'Windows',
-        'osVersion': '10',
-        'browserName': 'Firefox',
-        'sessionName': scenario_name
-    }
-    options.set_capability('bstack:options', bstack_options)
-    context.driver = webdriver.Remote(command_executor=url, options=options)
-
-    context.driver.maximize_window()
-    context.driver.implicitly_wait(4)
-    context.driver.wait = WebDriverWait(context.driver, 10)
-
-    context.app = Application(context.driver)
+    # bs_user = 'younessaniba_I0SxBY'
+    # bs_key = 'QWq5RKYUyTBQJqEakqRH'
+    # url = f'http://{bs_user}:{bs_key}@hub-cloud.browserstack.com/wd/hub'
+    #
+    # options = Options()
+    # bstack_options = {
+    #     'os': 'Windows',
+    #     'osVersion': '10',
+    #     'browserName': 'Firefox',
+    #     'sessionName': scenario_name
+    # }
+    # options.set_capability('bstack:options', bstack_options)
+    # context.driver = webdriver.Remote(command_executor=url, options=options)
+    #
+    # context.driver.maximize_window()
+    # context.driver.implicitly_wait(4)
+    # context.driver.wait = WebDriverWait(context.driver, 10)
+    #
+    # context.app = Application(context.driver)
 
 
 def before_scenario(context, scenario):
