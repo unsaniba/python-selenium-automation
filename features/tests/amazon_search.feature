@@ -1,10 +1,10 @@
 # Created by uns at 8/4/23
 Feature: Test for Amazon Search
 
-#  Scenario: verify that user can search for a table
-#    Given Open Amazon page
-#    When Search for a table
-#    Then verify search result is "table"
+  Scenario: verify that user can search for a table
+    Given Open Amazon page
+    When Search for a table
+    Then verify search result is "table"
 #
 #  Scenario: verify that user can search for a cup
 #    Given Open Amazon page
@@ -13,8 +13,8 @@ Feature: Test for Amazon Search
 
   Scenario: Logged out user sees Sign in page when clicking Orders
    Given Open Amazon page
-   When Click Amazon Orders link
-   Then Verify Sign In page is opened
+   When Click Orders
+   Then Verify Sign In page opened
 
 
   Scenario: verify that user can search for a dress

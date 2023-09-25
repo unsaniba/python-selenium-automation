@@ -29,10 +29,6 @@ Feature: SignIn Tests
 
 
 
-  Scenario: Click on Best Sellers link and verify top links
-    Given Open Amazon page
-    When Click BESTSELLER
-    Then Verify footer has 5 links
-    When Click on each top link and verify the correct page opens
+
 
 

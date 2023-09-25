@@ -1,9 +1,13 @@
 from behave import given, when, then
 from selenium.webdriver.common.by import By
 
+SIGNIN_HEADER = (By.XPATH, "//h1[@class='a-spacing-small']")
+EMAIL_INPUT = (By.ID, 'ap_email')
 
-@then('verify sign in opened')
-def verify_signin(context):
-    expected_result = 'Sign in'
-    actual_result = context.driver.find_element(By.CSS_SELECTOR, '.a-spacing-small').text
-    assert expected_result == actual_result, f'Error, expected {expected_result} did not match actual {actual_result}'
+
+@then('Verify sign in page opened')
+def verify_signin_opened(context):
+    actual_text = context.driver.find_element(*SIGNIN_HEADER).text
+    assert actual_text == 'Sign in', f'Expected Sign in but got {actual_text}'
+    # Verify email field present
+    context.driver.find_element(*EMAIL_INPUT)
